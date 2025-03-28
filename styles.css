@@ -3,20 +3,24 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image:url("assets/worms_rumble-5305071.jpg") ;
+    background-size: cover; /* La imagen cubrirá todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+
 }
 
 h1.titulo {
     text-align: center;
-    font-size: 2.5em;
-    color: #333;
+    font-size: 3em;
+    color: #f0f0f0; /* Azul oscuro */
     margin-top: 20px;
 }
 
 h2.subtitulo {
     text-align: center;
-    font-size: 1.8em;
-    color: #555;
+    font-size: 2em;
+    color: #fcfcfc; /* Azul intermedio */
     margin-top: 10px;
 }
 
@@ -24,68 +28,106 @@ h2.subtitulo {
 .tarjetas {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 20px;
+    gap: 30px;
+    margin: 40px;
 }
 
 .tarjeta-de-mokepon {
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
+    border: 3px solid #b3d9ff; /* Azul claro */
+    border-radius: 15px;
+    padding: 20px;
     text-align: center;
     background-color: white;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .tarjeta-de-mokepon img {
-    max-width: 100px;
+    max-width: 120px;
     border-radius: 10px;
 }
 
 .tarjeta-de-mokepon:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color: #004080; /* Resaltar el borde */
 }
 
 /* Botones */
 .boton-ataque, #boton-mascota, #boton-reiniciar {
     display: block;
     padding: 10px 20px;
-    margin: 10px auto;
-    font-size: 1em;
+    margin: 20px auto;
+    font-size: 1.2em;
     color: white;
-    background-color: #007bff;
+    background-color: #0059b3;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .boton-ataque:hover, #boton-mascota:hover, #boton-reiniciar:hover {
-    background-color: #0056b3;
+    background-color: #004080; /* Más oscuro al pasar el cursor */
+    transform: scale(1.05);
 }
 
 /* Mensajes */
 #mensajes {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 #resultado {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+/* Contenedor de vidas */
+.vidas {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 10px;
+    background-color: #b3d9ff; /* Fondo azul claro */
+    border-radius: 10px;
+    text-align: center;
+    color: #004080;
     font-size: 1.2em;
-    color: #333;
+}
+
+.vidas div {
+    flex: 1;
 }
 
 /* Ataques */
 .ataques {
     display: flex;
-    justify-content: space-around;
-    margin: 20px;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px;
 }
 
 .ataques div {
     text-align: center;
-    font-size: 1em;
-    color: #555;
+    font-size: 1.2em;
+    color: #004080;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .ataques {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .boton-ataque {
+        width: 90%; /* Botones más amplios en móviles */
+    }
 }
