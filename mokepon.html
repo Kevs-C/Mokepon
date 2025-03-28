@@ -3,74 +3,70 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MOKEPON</title>
+        <title>Worns</title>
         <script src="./js/mokepon.js"></script>
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
+        <!-- Selección de mascota -->
         <section id="seleccionar-mascota">
             <h1 class="titulo">Worms</h1>
-
             <h2 class="subtitulo">Elige tu Mascota:</h2>
 
             <div class="tarjetas">
-                <h2>Selecciona tu personaje</h2>
-
                 <label class="tarjeta-de-mokepon" for="Gruñon">
-                    <P>Gruñon</P>
-                    <img src="./assets/Personaje 1.png" alt="Gruñon">
+                    <p>Gruñon</p>
+                    <img src="assets/Personaje 1.png" alt="Gruñon">
                 </label>
                 <input type="radio" name="mascota" id="Gruñon">
-    
+
                 <label class="tarjeta-de-mokepon" for="Karateka">
                     <p>Karateka</p>
                     <img src="assets/Personaje 2.png" alt="Karateka">
                 </label>
                 <input type="radio" name="mascota" id="Karateka">
-    
+
                 <label class="tarjeta-de-mokepon" for="MadreRusia">
                     <p>Madre Rusia</p>
                     <img src="assets/Personaje 3.png" alt="Madre Rusia">
                 </label>
-                <input type="radio" name="mascota" id="Madre Rusia">
+                <input type="radio" name="mascota" id="MadreRusia">
             </div>
 
-            <button id="boton-mascota">Seleccionar</button>
+            <button id="boton-mascota">Seleccionar Mascota</button>
         </section>
 
-
+        <!-- Selección de ataque -->
         <section id="seleccionar-ataque">
-            <h1 class="titulo">Worns</h1>
+            <h1 class="titulo">Worms</h1>
             <h2 class="subtitulo">Elige tu Ataque:</h2>
-            
-            <div>
+
+            <div class="ataques">
                 <button id="boton-espada" class="boton-ataque">Espada ⚔️</button>
                 <button id="boton-arco" class="boton-ataque">Arco 🏹</button>
                 <button id="boton-escudo" class="boton-ataque">Escudo 🛡️</button>
             </div>
 
-
             <div id="mensajes">
-                <p id="resultado">Mucha Suerte!</p>
-
+                <p id="resultado">¡Mucha suerte!</p>
                 <section id="reiniciar">
                     <button id="boton-reiniciar">Reiniciar</button>
                 </section>
             </div>
 
-            <div class="ataques">
+            <div class="vidas">
                 <div>
-                    <p id="vidas-jugador">3</p>
+                    <p>Jugador:</p>
+                    <p id="vidas-jugador">10</p>
                     <p id="mascota-jugador"></p>
-                    <p id="ataques-del-jugador"></p>
                 </div>
 
                 <div>
-                    <p id="vidas-enemigo">3</p>
+                    <p>Enemigo:</p>
+                    <p id="vidas-enemigo">10</p>
                     <p id="mascota-enemigo"></p>
-                    <p id="ataques-del-enemigo"></p>
-                </div>                
+                </div>
             </div>
         </section>
     </body>
